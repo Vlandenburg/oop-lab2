@@ -13,3 +13,4 @@ build/
 # Другие временные файлы
 *~
 .DS_Store
+Testing/
