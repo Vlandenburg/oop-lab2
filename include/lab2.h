@@ -1,5 +1,5 @@
-#ifndef LAB2_REFACTORED_H
-#define LAB2_REFACTORED_H
+#ifndef LAB2_FINAL_H
+#define LAB2_FINAL_H
 
 #include <iostream>
 #include <string>
@@ -8,19 +8,15 @@
 
 class Eleven {
 public:
-    
     Eleven();
     Eleven(const size_t& n, unsigned char t = 0);
     Eleven(const std::initializer_list<unsigned char>& t);
     Eleven(const std::string& t);
 
-    
     virtual ~Eleven() noexcept;
     Eleven(const Eleven& other);
     Eleven(Eleven&& other) noexcept;
-    
 
-  
     Eleven add(const Eleven& other) const;
     Eleven subtract(const Eleven& other) const;
 
@@ -31,13 +27,11 @@ public:
     std::string toString() const;
 
 private:
-    
-    unsigned char* _digits = nullptr; // Массив для хранения цифр
-    size_t _count = 0;              // Количество цифр
+    unsigned char* _digits = nullptr;
+    size_t _count = 0;
 
-    
     unsigned char toDigit(char c) const;
     char toChar(unsigned char d) const;
 };
 
-#endif 
+#endif
